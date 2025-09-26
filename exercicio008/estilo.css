@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    background-color: rgb(72, 135, 187);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif; 
+}
+
+h1 {
+    color: goldenrod;
+    text-transform: uppercase;
+    font-family: 'Arial Black', Gadget, sans-serif; 
+    letter-spacing: 3px;
+}
+
+h1:hover {
+    color: rgb(137, 45, 223);
+    cursor: crosshair;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 3px;
+    font-size: 16px;
+}
+
+button {
+    border: 0;
+    background-color: rgb(204, 35, 35);
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px;
+    cursor: pointer;
+}
+
+h3 {
+    background-color: gold;
+}
+
+span {
+    color: black; 
+}
