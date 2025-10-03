@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fotos.css">
+</head>
+<body>
+    <img src="img/capitao-america-grande.jpg" id="foto-grande">
+    <div class="miniaturas">
+        <img src="img/capitao-america.jpg" onclick="trocarfoto1()">
+        <img src="img/homem-de-ferro.jpg" onclick="trocarfoto2()">
+        <img src="img/wolverine.jpg" onclick="trocarfoto3()">
+    </div>
+    <h1 id="titulo">Capitão America</h1>
+
+    <script>
+        function trocarfoto1(){
+            document.getElementId("foto-grande").scr="img/capitao-america-grande.jpg"
+        }
+
+        function trocarfoto2(){
+            document.getElementBiId("foto-grande").scr="img/homem-de-ferro-grande.jpg"
+            document.getElementBiId("título").innerHTML = "Homem de Ferro"
+        }
+
+        function trocarfoto3(){
+            document.getElementBiId("fotogrande").scr="img/wolverine-grande.jpg"
+        }
+    </script>
+</body>
+</html>
