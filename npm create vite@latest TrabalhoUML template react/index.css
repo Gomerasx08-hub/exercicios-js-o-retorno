@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonte e estilo geral */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Botão de foco */
+button:focus {
+  outline: none;
+}
+
+/* Animações suaves */
+* {
+  transition: all 0.3s ease;
+}
