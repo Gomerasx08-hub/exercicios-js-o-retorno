@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card-pokemon {
+            background-color: #663399; 
+            color: #fff;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .card-pokemon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+        }
+
+        .card-pokemon img {
+            filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
+        }
+
+        .btn-outline-light:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/pokemon.png" alt="Pokemon" class="img-fluid mx-auto d-block" width="300">
+        <div class="row mt-5">
+            <div class="col-6 col-md-4 mx-auto text-center p-4 card-pokemon">
+                <h3 id="numero">Número</h3>
+                <h1 id="nome">Nome do Pokemon</h1>
+                <img src="" id="foto" class="img-fluid my-3">
+                <button type="button" class="btn btn-outline-light mt-4 fw-bold d-block mx-auto">REVELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
