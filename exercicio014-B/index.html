@@ -7,44 +7,83 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheet" href="style.css">
 
+
     <style>
-        body {
+        body { 
+    
             background-color: #000;
             color: #fff;
             font-family: 'Poppins', sans-serif;
-        }
+            text-align: center;
+            padding: 40px;
+            }
 
         .card-pokemon {
-            background-color: #663399; 
-            color: #fff;
+            background-color: #663399;
             border-radius: 15px;
-            transition: all 0.3s ease;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            }
+
+  
+        .faixa-preta {
+            position: absolute;
+            top: 20px; 
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background-color: #000;
+            border-radius: 15px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: transparent; 
         }
 
-        .card-pokemon:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-        }
+  
+        .faixa-preta.esconder {
+        display: none;
+  }
 
-        .card-pokemon img {
+        img#foto {
+            width: 100%;
+            max-width: 260px;
+            margin: 15px 0;
             filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
         }
 
-        .btn-outline-light:hover {
-            background-color: #fff;
-            color: #000;
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
         }
-    </style>
+
+        button:hover {
+        background: #fff;
+        color: #000;
+</style>
+
 </head>
 <body>
     <div class="container">
         <img src="img/pokemon.png" alt="Pokemon" class="img-fluid mx-auto d-block" width="300">
+        <div id="overlay" class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
         <div class="row mt-5">
             <div class="col-6 col-md-4 mx-auto text-center p-4 card-pokemon">
                 <h3 id="numero">Número</h3>
                 <h1 id="nome">Nome do Pokemon</h1>
                 <img src="" id="foto" class="img-fluid my-3">
                 <button type="button" class="btn btn-outline-light mt-4 fw-bold d-block mx-auto">REVELAR</button>
+                <button type="button" class="btn btn-outline-light mt-2 fw-bold d-block mx-auto" onclick="fnListarPokemon(); fnEsconder()">
+                SORTEAR</button>
             </div>
         </div>
     </div>
